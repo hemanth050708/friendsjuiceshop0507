@@ -156,15 +156,26 @@
     border-radius:var(--radius);
     overflow:hidden;
     border:1px solid var(--line);
+    display: flex;
+    flex-direction: column;
   }
+  
+  /* Adjusted image alignment for perfect grids */
   .card .photo{
-    width:100%;
-    aspect-ratio:4/3;
-    object-fit:cover;
-    background:var(--cream-alt);
+    width: 100%;
+    height: 200px; /* Fallback for browsers that don't support aspect-ratio */
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    object-position: center;
+    background: var(--cream-alt);
+    border-bottom: 1px solid var(--line);
   }
+  
   .card-body{
     padding:12px 14px 16px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
   }
   .card-body h3{
     font-size:1.05rem;
@@ -175,6 +186,7 @@
     color:var(--ink-soft);
     margin-top:3px;
     min-height:2.2em;
+    flex-grow: 1;
   }
   .card-body .price-row{
     margin-top:10px;
@@ -275,7 +287,7 @@
     <div class="grid">
 
       <div class="card">
-        <img class="photo" src="https://loremflickr.com/400/300/watermelon,juice" alt="Watermelon juice">
+        <img class="photo" src="https://images.unsplash.com/photo-1589733955941-5eeaf752f6dd?auto=format&fit=crop&w=400&h=300&q=80" alt="Watermelon juice">
         <div class="card-body">
           <h3>Watermelon</h3>
           <div class="desc">Chilled, seed-free, no added sugar</div>
@@ -284,7 +296,7 @@
       </div>
 
       <div class="card">
-        <img class="photo" src="https://loremflickr.com/400/300/sweetlime,juice" alt="Mosambi juice">
+        <img class="photo" src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=400&h=300&q=80" alt="Mosambi juice">
         <div class="card-body">
           <h3>Mosambi (Sweet Lime)</h3>
           <div class="desc">A light, tangy everyday favourite</div>
@@ -293,7 +305,7 @@
       </div>
 
       <div class="card">
-        <img class="photo" src="https://loremflickr.com/400/300/orange,juice" alt="Orange juice">
+        <img class="photo" src="https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=400&h=300&q=80" alt="Orange juice">
         <div class="card-body">
           <h3>Orange</h3>
           <div class="desc">Pressed from ripe, seasonal oranges</div>
@@ -302,7 +314,7 @@
       </div>
 
       <div class="card">
-        <img class="photo" src="https://loremflickr.com/400/300/pineapple,juice" alt="Pineapple juice">
+        <img class="photo" src="https://images.unsplash.com/photo-1550828520-4cb496926fc9?auto=format&fit=crop&w=400&h=300&q=80" alt="Pineapple juice">
         <div class="card-body">
           <h3>Pineapple</h3>
           <div class="desc">Sweet and slightly tart</div>
@@ -311,7 +323,7 @@
       </div>
 
       <div class="card">
-        <img class="photo" src="https://loremflickr.com/400/300/pomegranate,juice" alt="Pomegranate juice">
+        <img class="photo" src="https://images.unsplash.com/photo-1615486171447-385ee7f311c9?auto=format&fit=crop&w=400&h=300&q=80" alt="Pomegranate juice">
         <div class="card-body">
           <h3>Pomegranate</h3>
           <div class="desc">Hand-deseeded, no water added</div>
@@ -320,7 +332,7 @@
       </div>
 
       <div class="card">
-        <img class="photo" src="https://loremflickr.com/400/300/grape,juice" alt="Grape juice">
+        <img class="photo" src="https://images.unsplash.com/photo-1596704104052-a8c6db274bb0?auto=format&fit=crop&w=400&h=300&q=80" alt="Grape juice">
         <div class="card-body">
           <h3>Grape</h3>
           <div class="desc">Deep purple, naturally sweet</div>
@@ -329,7 +341,7 @@
       </div>
 
       <div class="card">
-        <img class="photo" src="https://loremflickr.com/400/300/papaya,fruit" alt="Papaya juice">
+        <img class="photo" src="https://images.unsplash.com/photo-1617112848923-cc2234394a8a?auto=format&fit=crop&w=400&h=300&q=80" alt="Papaya juice">
         <div class="card-body">
           <h3>Papaya</h3>
           <div class="desc">Smooth, mildly sweet, easy on the stomach</div>
@@ -338,7 +350,7 @@
       </div>
 
       <div class="card">
-        <img class="photo" src="https://loremflickr.com/400/300/apple,juice" alt="Apple juice">
+        <img class="photo" src="https://images.unsplash.com/photo-1600271801401-66bb45501fb9?auto=format&fit=crop&w=400&h=300&q=80" alt="Apple juice">
         <div class="card-body">
           <h3>Apple</h3>
           <div class="desc">Crisp and clean, kids' favourite</div>
@@ -357,7 +369,7 @@
     <div class="grid">
 
       <div class="card">
-        <img class="photo" src="https://loremflickr.com/400/300/mango,juice" alt="Mango juice">
+        <img class="photo" src="https://images.unsplash.com/photo-1622485507722-b7e615e47854?auto=format&fit=crop&w=400&h=300&q=80" alt="Mango juice">
         <div class="card-body">
           <h3>Mango</h3>
           <div class="desc">Alphonso, when it's in season</div>
@@ -366,7 +378,7 @@
       </div>
 
       <div class="card">
-        <img class="photo" src="https://loremflickr.com/400/300/sapota,fruit" alt="Chikoo juice">
+        <img class="photo" src="https://images.unsplash.com/photo-1615478491845-a74426cb7bd1?auto=format&fit=crop&w=400&h=300&q=80" alt="Chikoo juice">
         <div class="card-body">
           <h3>Chikoo (Sapota)</h3>
           <div class="desc">Malty-sweet, thick and filling</div>
@@ -375,7 +387,7 @@
       </div>
 
       <div class="card">
-        <img class="photo" src="https://loremflickr.com/400/300/gooseberry,fruit" alt="Amla juice">
+        <img class="photo" src="https://images.unsplash.com/photo-1634560731802-bd9ee263bd34?auto=format&fit=crop&w=400&h=300&q=80" alt="Amla juice">
         <div class="card-body">
           <h3>Amla (Gooseberry)</h3>
           <div class="desc">Sharp, tangy, a morning regular's pick</div>
@@ -384,7 +396,7 @@
       </div>
 
       <div class="card">
-        <img class="photo" src="https://loremflickr.com/400/300/blackberry,fruit" alt="Jamun juice">
+        <img class="photo" src="https://images.unsplash.com/photo-1596541620025-055374828b6d?auto=format&fit=crop&w=400&h=300&q=80" alt="Jamun juice">
         <div class="card-body">
           <h3>Jamun</h3>
           <div class="desc">Earthy and deep purple, short season</div>
@@ -393,7 +405,7 @@
       </div>
 
       <div class="card">
-        <img class="photo" src="https://loremflickr.com/400/300/carrot,beetroot" alt="Carrot beet juice">
+        <img class="photo" src="https://images.unsplash.com/photo-1609503463720-d3a3c26788db?auto=format&fit=crop&w=400&h=300&q=80" alt="Carrot beet juice">
         <div class="card-body">
           <h3>Carrot–Beet</h3>
           <div class="desc">Earthy, naturally sweet, no sugar needed</div>
@@ -412,7 +424,7 @@
     <div class="grid">
 
       <div class="card">
-        <img class="photo" src="https://loremflickr.com/400/300/banana,milkshake" alt="Banana milkshake">
+        <img class="photo" src="https://images.unsplash.com/photo-1576402424564-9be83e352f75?auto=format&fit=crop&w=400&h=300&q=80" alt="Banana milkshake">
         <div class="card-body">
           <h3>Banana Milkshake</h3>
           <div class="desc">Thick, creamy, no ice cream needed</div>
@@ -421,7 +433,7 @@
       </div>
 
       <div class="card">
-        <img class="photo" src="https://loremflickr.com/400/300/mango,milkshake" alt="Mango milkshake">
+        <img class="photo" src="https://images.unsplash.com/photo-1546171753-97d7676e4602?auto=format&fit=crop&w=400&h=300&q=80" alt="Mango milkshake">
         <div class="card-body">
           <h3>Mango Milkshake</h3>
           <div class="desc">Rich and cold, made with real mango</div>
@@ -430,7 +442,7 @@
       </div>
 
       <div class="card">
-        <img class="photo" src="https://loremflickr.com/400/300/cucumber,mint" alt="Cucumber mint cooler">
+        <img class="photo" src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=400&h=300&q=80" alt="Cucumber mint cooler">
         <div class="card-body">
           <h3>Cucumber Mint Cooler</h3>
           <div class="desc">Light, refreshing, nothing heavy</div>
@@ -439,7 +451,7 @@
       </div>
 
       <div class="card">
-        <img class="photo" src="https://loremflickr.com/400/300/tendercoconut" alt="Tender coconut water">
+        <img class="photo" src="https://images.unsplash.com/photo-1526424458316-24855cf8e235?auto=format&fit=crop&w=400&h=300&q=80" alt="Tender coconut water">
         <div class="card-body">
           <h3>Tender Coconut Water</h3>
           <div class="desc">Served straight and simple</div>
@@ -448,7 +460,7 @@
       </div>
 
       <div class="card">
-        <img class="photo" src="https://loremflickr.com/400/300/mixedfruit,juice" alt="Mixed fruit punch">
+        <img class="photo" src="https://images.unsplash.com/photo-1621269389279-d5c22501a300?auto=format&fit=crop&w=400&h=300&q=80" alt="Mixed fruit punch">
         <div class="card-body">
           <h3>Mixed Fruit Punch</h3>
           <div class="desc">A blend of whatever's freshest that day</div>
