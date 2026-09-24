@@ -62,6 +62,12 @@
     margin:0 auto;
     position:relative;
     z-index:1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .hero-content {
+    max-width: 600px;
   }
   .hero .eyebrow-mark{
     font-size:2.4rem;
@@ -94,6 +100,26 @@
     display:flex;
     align-items:center;
     gap:6px;
+  }
+
+  /* Cart Toggle Button */
+  .cart-toggle-btn {
+    background: #fff;
+    color: var(--orange-deep);
+    border: none;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease;
+  }
+  .cart-toggle-btn:hover {
+    transform: translateY(-2px);
   }
 
   /* ---------- Offers strip ---------- */
@@ -147,12 +173,12 @@
   }
   .menu-section{ margin-bottom:48px; }
 
-  /* ---------- PERFECT ALIGNMENT GRID ---------- */
+  /* PERFECT ALIGNMENT GRID */
   .grid{
     display:grid;
     grid-template-columns:repeat(auto-fill, minmax(210px,1fr));
     gap:24px;
-    align-items: stretch; /* Forces equal height cards across the row */
+    align-items: stretch;
   }
   
   .card{
@@ -171,7 +197,6 @@
     box-shadow: 0 8px 24px rgba(43,33,24,0.08);
   }
 
-  /* Image & Floating Badge Wrapper */
   .photo-wrapper {
     position: relative;
     width: 100%;
@@ -206,12 +231,11 @@
     display: block;
   }
   
-  /* Text & Button Area */
   .card-body{
     padding:16px;
     display: flex;
     flex-direction: column;
-    flex: 1; /* Fills remaining card height */
+    flex: 1;
   }
   
   .card-body h3{
@@ -219,8 +243,6 @@
     line-height: 1.3;
     margin: 0 0 4px 0;
     color:var(--ink);
-    
-    /* Strict 2-line height constraint to keep rows aligned */
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -233,8 +255,6 @@
     line-height: 1.4;
     color:var(--ink-soft);
     margin: 0 0 16px 0;
-    
-    /* Strict 2-line height constraint to keep rows aligned */
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -246,7 +266,7 @@
     display:flex;
     align-items:center;
     justify-content:space-between;
-    margin-top: auto; /* Pushes the button straight to the bottom edge */
+    margin-top: auto;
   }
   
   .price-container {
@@ -288,6 +308,101 @@
     transform: scale(0.95);
   }
 
+  /* ---------- Shopping Cart Sidebar ---------- */
+  .cart-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 99;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  .cart-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .cart-panel {
+    position: fixed;
+    top: 0; right: -400px;
+    width: 100%; max-width: 380px;
+    height: 100%;
+    background: #fff;
+    z-index: 100;
+    box-shadow: -4px 0 24px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    transition: right 0.3s ease;
+  }
+  .cart-panel.active {
+    right: 0;
+  }
+  
+  .cart-header {
+    padding: 20px;
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--cream);
+  }
+  .cart-header h2 {
+    font-size: 1.4rem;
+    color: var(--ink);
+  }
+  .close-cart {
+    background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--ink-soft);
+  }
+
+  .cart-items {
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+    border-bottom: 1px dashed var(--line);
+  }
+  .cart-item-info h4 { margin: 0 0 4px 0; font-size: 0.95rem; }
+  .cart-item-price { color: var(--orange-deep); font-weight: 700; }
+  
+  .cart-footer {
+    padding: 20px;
+    border-top: 1px solid var(--line);
+    background: var(--cream);
+  }
+  .cart-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .checkout-btn {
+    width: 100%;
+    background: var(--orange);
+    color: #fff;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .empty-msg {
+    text-align: center;
+    color: var(--ink-soft);
+    margin-top: 40px;
+  }
+
   /* ---------- Footer ---------- */
   footer{
     background:var(--ink);
@@ -322,11 +437,8 @@
 
   @media (max-width:560px){
     .footer-inner{grid-template-columns:1fr;}
-  }
-
-  :focus-visible{
-    outline:3px solid var(--leaf);
-    outline-offset:2px;
+    .hero-inner { flex-direction: column; gap: 20px; }
+    .cart-toggle-btn { align-self: flex-start; }
   }
 </style>
 </head>
@@ -334,14 +446,19 @@
 
 <header class="hero">
   <div class="hero-inner">
-    <span class="eyebrow-mark">🍊</span>
-    <h1>Friends Juice Shop <span style="white-space:nowrap;">0507</span></h1>
-    <p class="tag">Fruit cut and squeezed fresh at the counter, every single glass — no syrups, no shortcuts.</p>
-    <div class="contact-row">
-      <span class="pill">📍 40-A, Thai Mahal Opposite, Ramnagar, Devakottai – 630302</span>
-      <span class="pill">📞 98421 07563 / 90477 21089</span>
-      <span class="pill">🕘 9:00 AM – 10:00 PM, all days</span>
+    <div class="hero-content">
+      <span class="eyebrow-mark">🍊</span>
+      <h1>Friends Juice Shop <span style="white-space:nowrap;">0507</span></h1>
+      <p class="tag">Fruit cut and squeezed fresh at the counter, every single glass — no syrups, no shortcuts.</p>
+      <div class="contact-row">
+        <span class="pill">📍 40-A, Thai Mahal Opposite, Ramnagar</span>
+        <span class="pill">📞 98421 07563</span>
+        <span class="pill">🕘 9:00 AM – 10:00 PM</span>
+      </div>
     </div>
+    <button class="cart-toggle-btn" onclick="toggleCart()">
+      🛒 Cart (<span id="cart-count">0</span>)
+    </button>
   </div>
 </header>
 
@@ -349,7 +466,6 @@
   <div class="offers-inner">
     <div class="offer-item"><strong>₹70</strong> for any 2 juices, all day</div>
     <div class="offer-item"><strong>Buy 3, Get 1 Free</strong> every Tuesday & Friday</div>
-    <div class="offer-item"><strong>Student Combo</strong> — juice + milkshake for ₹75 with college ID</div>
   </div>
 </div>
 
@@ -362,7 +478,6 @@
     </div>
     <div class="grid">
 
-      <!-- WATERMELON -->
       <div class="card">
         <div class="photo-wrapper">
           <img class="photo" src="https://images.unsplash.com/photo-1589733955941-5eeaf752f6dd?w=500&h=375&fit=crop&q=80" alt="Watermelon juice">
@@ -374,12 +489,11 @@
             <div class="price-container">
               <span class="price-strike">₹30</span><span class="price">₹25</span>
             </div>
-            <button class="add-btn">+ Add</button>
+            <button class="add-btn" onclick="addToCart('Watermelon Juice', 25)">+ Add</button>
           </div>
         </div>
       </div>
 
-      <!-- MOSAMBI -->
       <div class="card">
         <div class="photo-wrapper">
           <img class="photo" src="https://images.unsplash.com/photo-qlWfxFXl15I?w=500&h=375&fit=crop&q=80" alt="Mosambi juice">
@@ -391,12 +505,11 @@
              <div class="price-container">
               <span class="price-strike">₹30</span><span class="price">₹25</span>
             </div>
-            <button class="add-btn">+ Add</button>
+            <button class="add-btn" onclick="addToCart('Mosambi (Sweet Lime)', 25)">+ Add</button>
           </div>
         </div>
       </div>
 
-      <!-- ORANGE -->
       <div class="card">
         <div class="photo-wrapper">
           <img class="photo" src="https://images.unsplash.com/photo-1613478223719-2ab802602423?w=500&h=375&fit=crop&q=80" alt="Orange juice">
@@ -408,15 +521,14 @@
              <div class="price-container">
               <span class="price-strike">₹40</span><span class="price">₹35</span>
             </div>
-            <button class="add-btn">+ Add</button>
+            <button class="add-btn" onclick="addToCart('Orange Juice', 35)">+ Add</button>
           </div>
         </div>
       </div>
 
-      <!-- PINEAPPLE -->
       <div class="card">
         <div class="photo-wrapper">
-          <img class="photo" src="https://images.unsplash.com/photo-1550828520-4cb496926fc9?w=500&h=375&fit=crop&q=80" alt="Pineapple juice">
+          <img class="photo" src="https://images.unsplash.com/photo-JN3B6fHAI44?w=500&h=375&fit=crop&q=80" alt="Pineapple juice">
         </div>
         <div class="card-body">
           <h3>Pineapple</h3>
@@ -425,16 +537,15 @@
              <div class="price-container">
               <span class="price-strike">₹40</span><span class="price">₹35</span>
             </div>
-            <button class="add-btn">+ Add</button>
+            <button class="add-btn" onclick="addToCart('Pineapple Juice', 35)">+ Add</button>
           </div>
         </div>
       </div>
 
-      <!-- POMEGRANATE -->
       <div class="card">
         <div class="photo-wrapper">
           <span class="badge">Fresh daily</span>
-          <img class="photo" src="https://images.unsplash.com/photo-an5Jf8HROtY?w=500&h=375&fit=crop&q=80" alt="Pomegranate juice">
+          <img class="photo" src="https://images.unsplash.com/photo-rt6Bb3GTq0I?w=500&h=375&fit=crop&q=80" alt="Pomegranate juice">
         </div>
         <div class="card-body">
           <h3>Pomegranate</h3>
@@ -443,12 +554,11 @@
              <div class="price-container">
               <span class="price-strike">₹60</span><span class="price">₹50</span>
             </div>
-            <button class="add-btn">+ Add</button>
+            <button class="add-btn" onclick="addToCart('Pomegranate Juice', 50)">+ Add</button>
           </div>
         </div>
       </div>
 
-      <!-- GRAPE -->
       <div class="card">
         <div class="photo-wrapper">
           <img class="photo" src="https://images.unsplash.com/photo-VOdONjAP_Lk?w=500&h=375&fit=crop&q=80" alt="Grape juice">
@@ -460,15 +570,14 @@
              <div class="price-container">
               <span class="price-strike">₹40</span><span class="price">₹35</span>
             </div>
-            <button class="add-btn">+ Add</button>
+            <button class="add-btn" onclick="addToCart('Grape Juice', 35)">+ Add</button>
           </div>
         </div>
       </div>
 
-      <!-- PAPAYA -->
       <div class="card">
         <div class="photo-wrapper">
-          <img class="photo" src="https://images.unsplash.com/photo-Z_tLJseBEOg?w=500&h=375&fit=crop&q=80" alt="Papaya juice">
+          <img class="photo" src="https://images.unsplash.com/photo-uBpCKXiKoF0?w=500&h=375&fit=crop&q=80" alt="Papaya juice">
         </div>
         <div class="card-body">
           <h3>Papaya</h3>
@@ -477,12 +586,11 @@
              <div class="price-container">
               <span class="price-strike">₹35</span><span class="price">₹30</span>
             </div>
-            <button class="add-btn">+ Add</button>
+            <button class="add-btn" onclick="addToCart('Papaya Juice', 30)">+ Add</button>
           </div>
         </div>
       </div>
 
-      <!-- APPLE -->
       <div class="card">
         <div class="photo-wrapper">
           <img class="photo" src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=500&h=375&fit=crop&q=80" alt="Apple juice">
@@ -494,7 +602,7 @@
              <div class="price-container">
               <span class="price-strike">₹50</span><span class="price">₹45</span>
             </div>
-            <button class="add-btn">+ Add</button>
+            <button class="add-btn" onclick="addToCart('Apple Juice', 45)">+ Add</button>
           </div>
         </div>
       </div>
@@ -509,11 +617,10 @@
     </div>
     <div class="grid">
 
-      <!-- MANGO -->
       <div class="card">
         <div class="photo-wrapper">
           <span class="badge seasonal">Seasonal</span>
-          <img class="photo" src="https://images.unsplash.com/photo-uBpCKXiKoF0?w=500&h=375&fit=crop&q=80" alt="Mango juice">
+          <img class="photo" src="https://images.unsplash.com/photo-7mlN-xl6yog?w=500&h=375&fit=crop&q=80" alt="Mango juice">
         </div>
         <div class="card-body">
           <h3>Mango</h3>
@@ -522,15 +629,14 @@
              <div class="price-container">
               <span class="price-strike">₹50</span><span class="price">₹45</span>
             </div>
-            <button class="add-btn">+ Add</button>
+            <button class="add-btn" onclick="addToCart('Mango Juice', 45)">+ Add</button>
           </div>
         </div>
       </div>
 
-      <!-- CHIKOO -->
       <div class="card">
         <div class="photo-wrapper">
-          <img class="photo" src="https://images.unsplash.com/photo-O39Vx5yPaD4?w=500&h=375&fit=crop&q=80" alt="Chikoo juice">
+          <img class="photo" src="https://images.unsplash.com/photo-HFjclWnOHrI?w=500&h=375&fit=crop&q=80" alt="Chikoo juice">
         </div>
         <div class="card-body">
           <h3>Chikoo (Sapota)</h3>
@@ -539,15 +645,14 @@
              <div class="price-container">
               <span class="price-strike">₹40</span><span class="price">₹35</span>
             </div>
-            <button class="add-btn">+ Add</button>
+            <button class="add-btn" onclick="addToCart('Chikoo (Sapota)', 35)">+ Add</button>
           </div>
         </div>
       </div>
 
-      <!-- AMLA -->
       <div class="card">
         <div class="photo-wrapper">
-          <img class="photo" src="https://images.unsplash.com/photo-1556881286-fc6915169721?w=500&h=375&fit=crop&q=80" alt="Amla juice">
+          <img class="photo" src="https://images.unsplash.com/photo-UJV9jbkx-jc?w=500&h=375&fit=crop&q=80" alt="Amla juice">
         </div>
         <div class="card-body">
           <h3>Amla (Gooseberry)</h3>
@@ -556,12 +661,11 @@
              <div class="price-container">
               <span class="price-strike">₹35</span><span class="price">₹30</span>
             </div>
-            <button class="add-btn">+ Add</button>
+            <button class="add-btn" onclick="addToCart('Amla Juice', 30)">+ Add</button>
           </div>
         </div>
       </div>
 
-      <!-- JAMUN -->
       <div class="card">
         <div class="photo-wrapper">
           <span class="badge seasonal">Seasonal</span>
@@ -574,12 +678,11 @@
              <div class="price-container">
               <span class="price-strike">₹50</span><span class="price">₹45</span>
             </div>
-            <button class="add-btn">+ Add</button>
+            <button class="add-btn" onclick="addToCart('Jamun Juice', 45)">+ Add</button>
           </div>
         </div>
       </div>
 
-      <!-- CARROT BEET -->
       <div class="card">
         <div class="photo-wrapper">
           <img class="photo" src="https://images.unsplash.com/photo-c5PN_wvHdQI?w=500&h=375&fit=crop&q=80" alt="Carrot beet juice">
@@ -591,7 +694,7 @@
              <div class="price-container">
               <span class="price-strike">₹40</span><span class="price">₹35</span>
             </div>
-            <button class="add-btn">+ Add</button>
+            <button class="add-btn" onclick="addToCart('Carrot-Beet Juice', 35)">+ Add</button>
           </div>
         </div>
       </div>
@@ -606,10 +709,9 @@
     </div>
     <div class="grid">
 
-      <!-- BANANA MILKSHAKE -->
       <div class="card">
         <div class="photo-wrapper">
-          <img class="photo" src="https://images.unsplash.com/photo-dj0Np1jooWk?w=500&h=375&fit=crop&q=80" alt="Banana milkshake">
+          <img class="photo" src="https://images.unsplash.com/photo-bT-eRvDBrZQ?w=500&h=375&fit=crop&q=80" alt="Banana milkshake">
         </div>
         <div class="card-body">
           <h3>Banana Milkshake</h3>
@@ -618,15 +720,14 @@
              <div class="price-container">
               <span class="price-strike">₹45</span><span class="price">₹40</span>
             </div>
-            <button class="add-btn">+ Add</button>
+            <button class="add-btn" onclick="addToCart('Banana Milkshake', 40)">+ Add</button>
           </div>
         </div>
       </div>
 
-      <!-- MANGO MILKSHAKE -->
       <div class="card">
         <div class="photo-wrapper">
-          <img class="photo" src="https://images.unsplash.com/photo-1546171753-97d7676e4602?w=500&h=375&fit=crop&q=80" alt="Mango milkshake">
+          <img class="photo" src="https://images.unsplash.com/photo-O39Vx5yPaD4?w=500&h=375&fit=crop&q=80" alt="Mango milkshake">
         </div>
         <div class="card-body">
           <h3>Mango Milkshake</h3>
@@ -635,15 +736,14 @@
              <div class="price-container">
               <span class="price-strike">₹55</span><span class="price">₹50</span>
             </div>
-            <button class="add-btn">+ Add</button>
+            <button class="add-btn" onclick="addToCart('Mango Milkshake', 50)">+ Add</button>
           </div>
         </div>
       </div>
 
-      <!-- CUCUMBER MINT COOLER -->
       <div class="card">
         <div class="photo-wrapper">
-          <img class="photo" src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=500&h=375&fit=crop&q=80" alt="Cucumber mint cooler">
+          <img class="photo" src="https://images.unsplash.com/photo-o-5VPQlSzaA?w=500&h=375&fit=crop&q=80" alt="Cucumber mint cooler">
         </div>
         <div class="card-body">
           <h3>Cucumber Mint Cooler</h3>
@@ -652,15 +752,14 @@
              <div class="price-container">
               <span class="price-strike">₹30</span><span class="price">₹25</span>
             </div>
-            <button class="add-btn">+ Add</button>
+            <button class="add-btn" onclick="addToCart('Cucumber Mint Cooler', 25)">+ Add</button>
           </div>
         </div>
       </div>
 
-      <!-- TENDER COCONUT -->
       <div class="card">
         <div class="photo-wrapper">
-          <img class="photo" src="https://images.unsplash.com/photo-b9pis-g1F6g?w=500&h=375&fit=crop&q=80" alt="Tender coconut water">
+          <img class="photo" src="https://images.unsplash.com/photo-Q9cU3p8IuWM?w=500&h=375&fit=crop&q=80" alt="Tender coconut water">
         </div>
         <div class="card-body">
           <h3>Tender Coconut Water</h3>
@@ -669,15 +768,14 @@
              <div class="price-container">
               <span class="price-strike">₹40</span><span class="price">₹35</span>
             </div>
-            <button class="add-btn">+ Add</button>
+            <button class="add-btn" onclick="addToCart('Tender Coconut', 35)">+ Add</button>
           </div>
         </div>
       </div>
 
-      <!-- MIXED FRUIT PUNCH -->
       <div class="card">
         <div class="photo-wrapper">
-          <img class="photo" src="https://images.unsplash.com/photo-t1aF27GcvQQ?w=500&h=375&fit=crop&q=80" alt="Mixed fruit punch">
+          <img class="photo" src="https://images.unsplash.com/photo-WXcwtho0F5Y?w=500&h=375&fit=crop&q=80" alt="Mixed fruit punch">
         </div>
         <div class="card-body">
           <h3>Mixed Fruit Punch</h3>
@@ -686,7 +784,7 @@
              <div class="price-container">
               <span class="price-strike">₹50</span><span class="price">₹45</span>
             </div>
-            <button class="add-btn">+ Add</button>
+            <button class="add-btn" onclick="addToCart('Mixed Fruit Punch', 45)">+ Add</button>
           </div>
         </div>
       </div>
@@ -695,6 +793,25 @@
   </section>
 
 </main>
+
+<!-- Shopping Cart Panel -->
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+<div class="cart-panel" id="cartPanel">
+  <div class="cart-header">
+    <h2>Your Order</h2>
+    <button class="close-cart" onclick="toggleCart()">×</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="empty-msg">Your cart is currently empty.</div>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Total</span>
+      <span id="cartTotal">₹0</span>
+    </div>
+    <button class="checkout-btn" onclick="alert('Proceeding to checkout! (Demo)')">Checkout</button>
+  </div>
+</div>
 
 <footer>
   <div class="footer-inner">
@@ -712,6 +829,63 @@
   </div>
   <div class="foot-note">Fresh fruit, cut daily. Menu and prices may vary slightly by season.</div>
 </footer>
+
+<script>
+  let cart = [];
+
+  function addToCart(itemName, itemPrice) {
+    cart.push({ name: itemName, price: itemPrice });
+    updateCartUI();
+    
+    // Automatically open cart on first add
+    if(!document.getElementById('cartPanel').classList.contains('active')){
+      toggleCart();
+    }
+  }
+
+  function updateCartUI() {
+    const cartItemsContainer = document.getElementById('cartItems');
+    const cartTotalElement = document.getElementById('cartTotal');
+    const cartCountElement = document.getElementById('cart-count');
+    
+    cartCountElement.innerText = cart.length;
+    
+    if (cart.length === 0) {
+      cartItemsContainer.innerHTML = '<div class="empty-msg">Your cart is currently empty.</div>';
+      cartTotalElement.innerText = '₹0';
+      return;
+    }
+
+    let itemsHTML = '';
+    let total = 0;
+
+    cart.forEach((item, index) => {
+      itemsHTML += `
+        <div class="cart-item">
+          <div class="cart-item-info">
+            <h4>${item.name}</h4>
+            <div class="cart-item-price">₹${item.price}</div>
+          </div>
+          <button style="background:none; border:none; color:red; cursor:pointer;" onclick="removeFromCart(${index})">Remove</button>
+        </div>
+      `;
+      total += item.price;
+    });
+
+    cartItemsContainer.innerHTML = itemsHTML;
+    cartTotalElement.innerText = '₹' + total;
+  }
+
+  function removeFromCart(index) {
+    cart.splice(index, 1);
+    updateCartUI();
+  }
+
+  function toggleCart() {
+    document.getElementById('cartPanel').classList.toggle('active');
+    document.getElementById('cartOverlay').classList.toggle('active');
+  }
+</script>
 
 </body>
 </html>
