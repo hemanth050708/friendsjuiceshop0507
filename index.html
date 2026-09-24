@@ -167,14 +167,19 @@
     box-shadow: 0 8px 24px rgba(43,33,24,0.08);
   }
 
+  /* STRICT IMAGE ALIGNMENT FIX */
   .card .photo{
+    display: block;
     width: 100%;
     height: 200px;
-    aspect-ratio: 4/3;
-    object-fit: cover;
+    min-height: 200px;
+    max-height: 200px;
+    object-fit: cover !important;
     object-position: center;
     background: var(--cream-alt);
     border-bottom: 1px solid var(--line);
+    margin: 0;
+    padding: 0;
   }
   
   .card-body{
@@ -324,7 +329,7 @@
     <div class="grid">
 
       <div class="card">
-        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Watermelon_juice.jpg?width=400" alt="Watermelon juice">
+        <img class="photo" src="https://images.pexels.com/photos/1337825/pexels-photo-1337825.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Watermelon juice">
         <div class="card-body">
           <h3>Watermelon</h3>
           <div class="desc">Chilled, seed-free, no added sugar</div>
@@ -338,7 +343,7 @@
       </div>
 
       <div class="card">
-        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Sweet_Lime_Juice.jpg?width=400" alt="Mosambi juice">
+        <img class="photo" src="https://images.pexels.com/photos/4099238/pexels-photo-4099238.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Mosambi juice">
         <div class="card-body">
           <h3>Mosambi (Sweet Lime)</h3>
           <div class="desc">A light, tangy everyday favourite</div>
@@ -352,7 +357,7 @@
       </div>
 
       <div class="card">
-        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Orange_juice_1.jpg?width=400" alt="Orange juice">
+        <img class="photo" src="https://images.pexels.com/photos/161440/orange-juice-glass-citrus-161440.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Orange juice">
         <div class="card-body">
           <h3>Orange</h3>
           <div class="desc">Pressed from ripe, seasonal oranges</div>
@@ -366,7 +371,7 @@
       </div>
 
       <div class="card">
-        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Pineapple_Juice.jpg?width=400" alt="Pineapple juice">
+        <img class="photo" src="https://images.pexels.com/photos/1190574/pexels-photo-1190574.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Pineapple juice">
         <div class="card-body">
           <h3>Pineapple</h3>
           <div class="desc">Sweet and slightly tart</div>
@@ -380,7 +385,7 @@
       </div>
 
       <div class="card">
-        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Pomegranate_juice.jpg?width=400" alt="Pomegranate juice">
+        <img class="photo" src="https://images.pexels.com/photos/5946081/pexels-photo-5946081.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Pomegranate juice">
         <div class="card-body">
           <div><span class="badge">Fresh daily</span></div>
           <h3>Pomegranate</h3>
@@ -395,7 +400,7 @@
       </div>
 
       <div class="card">
-        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Grape_Juice.jpg?width=400" alt="Grape juice">
+        <img class="photo" src="https://images.pexels.com/photos/3004803/pexels-photo-3004803.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Grape juice">
         <div class="card-body">
           <h3>Grape</h3>
           <div class="desc">Deep purple, naturally sweet</div>
@@ -409,7 +414,7 @@
       </div>
 
       <div class="card">
-        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Papaya_juice.JPG?width=400" alt="Papaya juice">
+        <img class="photo" src="https://images.pexels.com/photos/13511470/pexels-photo-13511470.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Papaya juice">
         <div class="card-body">
           <h3>Papaya</h3>
           <div class="desc">Smooth, mildly sweet, easy on the stomach</div>
@@ -423,7 +428,7 @@
       </div>
 
       <div class="card">
-        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Apple_juice.jpg?width=400" alt="Apple juice">
+        <img class="photo" src="https://images.pexels.com/photos/1092284/pexels-photo-1092284.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Apple juice">
         <div class="card-body">
           <h3>Apple</h3>
           <div class="desc">Crisp and clean, kids' favourite</div>
@@ -447,7 +452,7 @@
     <div class="grid">
 
       <div class="card">
-        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Mango_juice.JPG?width=400" alt="Mango juice">
+        <img class="photo" src="https://images.pexels.com/photos/338713/pexels-photo-338713.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Mango juice">
         <div class="card-body">
           <div><span class="badge">Seasonal</span></div>
           <h3>Mango</h3>
@@ -462,7 +467,7 @@
       </div>
 
       <div class="card">
-        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Chikoo_Milkshake.jpg?width=400" alt="Chikoo juice">
+        <img class="photo" src="https://images.pexels.com/photos/894086/pexels-photo-894086.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Chikoo juice">
         <div class="card-body">
           <h3>Chikoo (Sapota)</h3>
           <div class="desc">Malty-sweet, thick and filling</div>
@@ -476,7 +481,7 @@
       </div>
 
       <div class="card">
-        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Amla_juice.jpg?width=400" alt="Amla juice">
+        <img class="photo" src="https://images.pexels.com/photos/4099235/pexels-photo-4099235.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Amla juice">
         <div class="card-body">
           <h3>Amla (Gooseberry)</h3>
           <div class="desc">Sharp, tangy, a morning regular's pick</div>
@@ -490,7 +495,7 @@
       </div>
 
       <div class="card">
-        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Jamun_Juice.jpg?width=400" alt="Jamun juice">
+        <img class="photo" src="https://images.pexels.com/photos/461159/pexels-photo-461159.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Jamun juice">
         <div class="card-body">
           <div><span class="badge">Seasonal</span></div>
           <h3>Jamun</h3>
@@ -505,7 +510,7 @@
       </div>
 
       <div class="card">
-        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Carrot_juice.jpg?width=400" alt="Carrot beet juice">
+        <img class="photo" src="https://images.pexels.com/photos/1255555/pexels-photo-1255555.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Carrot beet juice">
         <div class="card-body">
           <h3>Carrot–Beet</h3>
           <div class="desc">Earthy, naturally sweet, no sugar needed</div>
@@ -529,7 +534,7 @@
     <div class="grid">
 
       <div class="card">
-        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Banana_milkshake.jpg?width=400" alt="Banana milkshake">
+        <img class="photo" src="https://images.pexels.com/photos/2611810/pexels-photo-2611810.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Banana milkshake">
         <div class="card-body">
           <h3>Banana Milkshake</h3>
           <div class="desc">Thick, creamy, no ice cream needed</div>
@@ -543,7 +548,7 @@
       </div>
 
       <div class="card">
-        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Mango_milkshake.jpg?width=400" alt="Mango milkshake">
+        <img class="photo" src="https://images.pexels.com/photos/3693732/pexels-photo-3693732.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Mango milkshake">
         <div class="card-body">
           <h3>Mango Milkshake</h3>
           <div class="desc">Rich and cold, made with real mango</div>
@@ -557,7 +562,7 @@
       </div>
 
       <div class="card">
-        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cucumber_juice.jpg?width=400" alt="Cucumber mint cooler">
+        <img class="photo" src="https://images.pexels.com/photos/1233319/pexels-photo-1233319.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Cucumber mint cooler">
         <div class="card-body">
           <h3>Cucumber Mint Cooler</h3>
           <div class="desc">Light, refreshing, nothing heavy</div>
@@ -571,7 +576,7 @@
       </div>
 
       <div class="card">
-        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tender_coconut_water.jpg?width=400" alt="Tender coconut water">
+        <img class="photo" src="https://images.pexels.com/photos/4187640/pexels-photo-4187640.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Tender coconut water">
         <div class="card-body">
           <h3>Tender Coconut Water</h3>
           <div class="desc">Served straight and simple</div>
@@ -585,7 +590,7 @@
       </div>
 
       <div class="card">
-        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Mixed_fruit_juice.jpg?width=400" alt="Mixed fruit punch">
+        <img class="photo" src="https://images.pexels.com/photos/973302/pexels-photo-973302.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Mixed fruit punch">
         <div class="card-body">
           <h3>Mixed Fruit Punch</h3>
           <div class="desc">A blend of whatever's freshest that day</div>
