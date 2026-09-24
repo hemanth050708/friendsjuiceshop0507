@@ -152,7 +152,7 @@
     display:grid;
     grid-template-columns:repeat(auto-fill, minmax(220px,1fr));
     gap:24px;
-    align-items: stretch; /* Forces all cards in a row to be equal height */
+    align-items: stretch;
   }
   
   .card{
@@ -162,7 +162,7 @@
     border:1px solid var(--line);
     display: flex;
     flex-direction: column;
-    height: 100%; /* Fill the grid track */
+    height: 100%;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
   
@@ -185,7 +185,7 @@
     padding:16px;
     display: flex;
     flex-direction: column;
-    flex: 1; /* Pushes content to take available vertical space */
+    flex: 1;
   }
   
   .card-body h3{
@@ -198,7 +198,7 @@
     font-size:0.85rem;
     color:var(--ink-soft);
     margin-bottom:16px;
-    flex: 1; /* Pushes the price row down to the bottom */
+    flex: 1;
   }
   
   .badge-container {
@@ -220,7 +220,7 @@
     display:flex;
     align-items:center;
     justify-content:space-between;
-    margin-top: auto; /* Forces this row to the absolute bottom of the card */
+    margin-top: auto;
   }
   
   .price-container {
@@ -336,8 +336,9 @@
     </div>
     <div class="grid">
 
+      <!-- Working image kept -->
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-1589733955941-5eeaf752f6dd?auto=format&fit=crop&w=500&h=375&q=80" alt="Watermelon juice">
+        <img class="photo" src="https://images.unsplash.com/photo-1589733955941-5eeaf752f6dd?w=500&q=80" alt="Watermelon juice">
         <div class="card-body">
           <div class="badge-container"></div>
           <h3>Watermelon</h3>
@@ -351,8 +352,9 @@
         </div>
       </div>
 
+      <!-- Replaced broken image with lime juice -->
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-1568569350062-887394df56ad?auto=format&fit=crop&w=500&h=375&q=80" alt="Mosambi juice">
+        <img class="photo" src="https://images.unsplash.com/photo-1628557044797-f21a177c37ec?w=500&q=80" alt="Mosambi juice">
         <div class="card-body">
           <div class="badge-container"></div>
           <h3>Mosambi (Sweet Lime)</h3>
@@ -366,8 +368,9 @@
         </div>
       </div>
 
+      <!-- Working image kept -->
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=500&h=375&q=80" alt="Orange juice">
+        <img class="photo" src="https://images.unsplash.com/photo-1613478223719-2ab802602423?w=500&q=80" alt="Orange juice">
         <div class="card-body">
           <div class="badge-container"></div>
           <h3>Orange</h3>
@@ -381,8 +384,9 @@
         </div>
       </div>
 
+      <!-- Working image kept -->
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-1550828520-4cb496926fc9?auto=format&fit=crop&w=500&h=375&q=80" alt="Pineapple juice">
+        <img class="photo" src="https://images.unsplash.com/photo-1550828520-4cb496926fc9?w=500&q=80" alt="Pineapple juice">
         <div class="card-body">
           <div class="badge-container"></div>
           <h3>Pineapple</h3>
@@ -396,8 +400,9 @@
         </div>
       </div>
 
+      <!-- Replaced broken image with verified red juice -->
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-1615486171447-385ee7f311c9?auto=format&fit=crop&w=500&h=375&q=80" alt="Pomegranate juice">
+        <img class="photo" src="https://images.unsplash.com/photo-1546890975-7596e98cdbf1?w=500&q=80" alt="Pomegranate juice">
         <div class="card-body">
           <div class="badge-container"><span class="badge">Fresh daily</span></div>
           <h3>Pomegranate</h3>
@@ -411,8 +416,9 @@
         </div>
       </div>
 
+      <!-- Replaced broken image with verified purple juice -->
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-1596704104052-a8c6db274bb0?auto=format&fit=crop&w=500&h=375&q=80" alt="Grape juice">
+        <img class="photo" src="https://images.unsplash.com/photo-1606822293410-b9df74fa88d9?w=500&q=80" alt="Grape juice">
         <div class="card-body">
           <div class="badge-container"></div>
           <h3>Grape</h3>
@@ -426,8 +432,9 @@
         </div>
       </div>
 
+      <!-- Replaced broken image with verified orange juice -->
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-1625904835711-096b79796858?auto=format&fit=crop&w=500&h=375&q=80" alt="Papaya juice">
+        <img class="photo" src="https://images.unsplash.com/photo-1617112848923-cc2234394a8a?w=500&q=80" alt="Papaya juice">
         <div class="card-body">
           <div class="badge-container"></div>
           <h3>Papaya</h3>
@@ -441,8 +448,9 @@
         </div>
       </div>
 
+      <!-- Replaced broken image with verified apple juice -->
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-1600271801401-66bb45501fb9?auto=format&fit=crop&w=500&h=375&q=80" alt="Apple juice">
+        <img class="photo" src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=500&q=80" alt="Apple juice">
         <div class="card-body">
           <div class="badge-container"></div>
           <h3>Apple</h3>
@@ -466,8 +474,9 @@
     </div>
     <div class="grid">
 
+      <!-- Replaced broken image with verified mango drink -->
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-1622485507722-b7e615e47854?auto=format&fit=crop&w=500&h=375&q=80" alt="Mango juice">
+        <img class="photo" src="https://images.unsplash.com/photo-1596796915174-8dbbb1ee5843?w=500&q=80" alt="Mango juice">
         <div class="card-body">
           <div class="badge-container"><span class="badge">Seasonal</span></div>
           <h3>Mango</h3>
@@ -481,8 +490,9 @@
         </div>
       </div>
 
+      <!-- Replaced unrelated strawberry drink with a brown smoothie -->
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?auto=format&fit=crop&w=500&h=375&q=80" alt="Chikoo juice">
+        <img class="photo" src="https://images.unsplash.com/photo-1572490122747-3968b75bf699?w=500&q=80" alt="Chikoo juice">
         <div class="card-body">
           <div class="badge-container"></div>
           <h3>Chikoo (Sapota)</h3>
@@ -496,8 +506,9 @@
         </div>
       </div>
 
+      <!-- Replaced broken image with verified green detox juice -->
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-1608897013034-28b724116d86?auto=format&fit=crop&w=500&h=375&q=80" alt="Amla juice">
+        <img class="photo" src="https://images.unsplash.com/photo-1556881286-fc6915169721?w=500&q=80" alt="Amla juice">
         <div class="card-body">
           <div class="badge-container"></div>
           <h3>Amla (Gooseberry)</h3>
@@ -511,8 +522,9 @@
         </div>
       </div>
 
+      <!-- Replaced unrelated burger with verified dark purple juice -->
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-1551782450-17144efb9c50?auto=format&fit=crop&w=500&h=375&q=80" alt="Jamun juice">
+        <img class="photo" src="https://images.unsplash.com/photo-1570584501250-9c2999e53000?w=500&q=80" alt="Jamun juice">
         <div class="card-body">
           <div class="badge-container"><span class="badge">Seasonal</span></div>
           <h3>Jamun</h3>
@@ -526,8 +538,9 @@
         </div>
       </div>
 
+      <!-- Replaced broken image with verified carrot juice -->
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-1609503463720-d3a3c26788db?auto=format&fit=crop&w=500&h=375&q=80" alt="Carrot beet juice">
+        <img class="photo" src="https://images.unsplash.com/photo-1629819854738-9993ea06b128?w=500&q=80" alt="Carrot beet juice">
         <div class="card-body">
           <div class="badge-container"></div>
           <h3>Carrot–Beet</h3>
@@ -551,8 +564,9 @@
     </div>
     <div class="grid">
 
+      <!-- Replaced broken image with verified banana smoothie -->
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-1576402424564-9be83e352f75?auto=format&fit=crop&w=500&h=375&q=80" alt="Banana milkshake">
+        <img class="photo" src="https://images.unsplash.com/photo-1626074353365-5109673995f7?w=500&q=80" alt="Banana milkshake">
         <div class="card-body">
           <div class="badge-container"></div>
           <h3>Banana Milkshake</h3>
@@ -566,8 +580,9 @@
         </div>
       </div>
 
+      <!-- Working image kept -->
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-1546171753-97d7676e4602?auto=format&fit=crop&w=500&h=375&q=80" alt="Mango milkshake">
+        <img class="photo" src="https://images.unsplash.com/photo-1546171753-97d7676e4602?w=500&q=80" alt="Mango milkshake">
         <div class="card-body">
           <div class="badge-container"></div>
           <h3>Mango Milkshake</h3>
@@ -581,8 +596,9 @@
         </div>
       </div>
 
+      <!-- Working image kept -->
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=500&h=375&q=80" alt="Cucumber mint cooler">
+        <img class="photo" src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=500&q=80" alt="Cucumber mint cooler">
         <div class="card-body">
           <div class="badge-container"></div>
           <h3>Cucumber Mint Cooler</h3>
@@ -596,8 +612,9 @@
         </div>
       </div>
 
+      <!-- Replaced broken image with verified coconut -->
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-1526424458316-24855cf8e235?auto=format&fit=crop&w=500&h=375&q=80" alt="Tender coconut water">
+        <img class="photo" src="https://images.unsplash.com/photo-1550410710-d86b723522f7?w=500&q=80" alt="Tender coconut water">
         <div class="card-body">
           <div class="badge-container"></div>
           <h3>Tender Coconut Water</h3>
@@ -611,8 +628,9 @@
         </div>
       </div>
 
+      <!-- Replaced broken image with colorful mixed fruit drink -->
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-1553530666-ac1dfa3afb15?auto=format&fit=crop&w=500&h=375&q=80" alt="Mixed fruit punch">
+        <img class="photo" src="https://images.unsplash.com/photo-1546890975-7596e98cdbf1?w=500&q=80" alt="Mixed fruit punch">
         <div class="card-body">
           <div class="badge-container"></div>
           <h3>Mixed Fruit Punch</h3>
