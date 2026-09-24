@@ -38,6 +38,7 @@
   }
   img{max-width:100%;display:block;}
   a{color:inherit;}
+  button { font-family: 'Inter', sans-serif; }
 
   /* ---------- Header / Hero ---------- */
   .hero{
@@ -185,6 +186,7 @@
   .card-body h3{
     font-size:1.05rem;
     color:var(--ink);
+    margin-bottom: 4px;
   }
   .card-body .desc{
     font-size:0.82rem;
@@ -194,7 +196,7 @@
     flex-grow: 1;
   }
   .card-body .price-row{
-    margin-top:10px;
+    margin-top:14px;
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -212,9 +214,10 @@
   .price{
     font-family:'Baloo 2',sans-serif;
     font-weight:700;
-    font-size:1.15rem;
+    font-size:1.25rem;
     color:var(--orange-deep);
   }
+  
   .badge{
     font-size:0.68rem;
     font-weight:600;
@@ -222,6 +225,28 @@
     background:#E9F1DC;
     border-radius:999px;
     padding:3px 9px;
+    display: inline-block;
+    margin-bottom: 6px;
+  }
+
+  .add-btn {
+    background: var(--leaf-deep);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+  }
+  
+  .add-btn:hover {
+    background: var(--leaf);
+  }
+  
+  .add-btn:active {
+    transform: scale(0.95);
   }
 
   /* ---------- Footer ---------- */
@@ -299,7 +324,7 @@
     <div class="grid">
 
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-XoN3v3Ge7EE?w=400&h=300&fit=crop" alt="Watermelon juice">
+        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Watermelon_juice.jpg?width=400" alt="Watermelon juice">
         <div class="card-body">
           <h3>Watermelon</h3>
           <div class="desc">Chilled, seed-free, no added sugar</div>
@@ -307,12 +332,13 @@
             <div class="price-container">
               <span class="price-strike">₹30</span><span class="price">₹25</span>
             </div>
+            <button class="add-btn">+ Add</button>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=400&h=300&fit=crop" alt="Mosambi juice">
+        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Sweet_Lime_Juice.jpg?width=400" alt="Mosambi juice">
         <div class="card-body">
           <h3>Mosambi (Sweet Lime)</h3>
           <div class="desc">A light, tangy everyday favourite</div>
@@ -320,12 +346,13 @@
              <div class="price-container">
               <span class="price-strike">₹30</span><span class="price">₹25</span>
             </div>
+            <button class="add-btn">+ Add</button>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-4BcZ6a5iIbU?w=400&h=300&fit=crop" alt="Orange juice">
+        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Orange_juice_1.jpg?width=400" alt="Orange juice">
         <div class="card-body">
           <h3>Orange</h3>
           <div class="desc">Pressed from ripe, seasonal oranges</div>
@@ -333,12 +360,13 @@
              <div class="price-container">
               <span class="price-strike">₹40</span><span class="price">₹35</span>
             </div>
+            <button class="add-btn">+ Add</button>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-ywS7HzUNjuM?w=400&h=300&fit=crop" alt="Pineapple juice">
+        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Pineapple_Juice.jpg?width=400" alt="Pineapple juice">
         <div class="card-body">
           <h3>Pineapple</h3>
           <div class="desc">Sweet and slightly tart</div>
@@ -346,26 +374,28 @@
              <div class="price-container">
               <span class="price-strike">₹40</span><span class="price">₹35</span>
             </div>
+            <button class="add-btn">+ Add</button>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-rt6Bb3GTq0I?w=400&h=300&fit=crop" alt="Pomegranate juice">
+        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Pomegranate_juice.jpg?width=400" alt="Pomegranate juice">
         <div class="card-body">
+          <div><span class="badge">Fresh daily</span></div>
           <h3>Pomegranate</h3>
           <div class="desc">Hand-deseeded, no water added</div>
           <div class="price-row">
              <div class="price-container">
               <span class="price-strike">₹60</span><span class="price">₹50</span>
             </div>
-            <span class="badge">Fresh daily</span>
+            <button class="add-btn">+ Add</button>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-MjHFLELBaA0?w=400&h=300&fit=crop" alt="Grape juice">
+        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Grape_Juice.jpg?width=400" alt="Grape juice">
         <div class="card-body">
           <h3>Grape</h3>
           <div class="desc">Deep purple, naturally sweet</div>
@@ -373,12 +403,13 @@
              <div class="price-container">
               <span class="price-strike">₹40</span><span class="price">₹35</span>
             </div>
+            <button class="add-btn">+ Add</button>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-1543362906-acfc16c67564?w=400&h=300&fit=crop" alt="Papaya juice">
+        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Papaya_juice.JPG?width=400" alt="Papaya juice">
         <div class="card-body">
           <h3>Papaya</h3>
           <div class="desc">Smooth, mildly sweet, easy on the stomach</div>
@@ -386,12 +417,13 @@
              <div class="price-container">
               <span class="price-strike">₹35</span><span class="price">₹30</span>
             </div>
+            <button class="add-btn">+ Add</button>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-3ULSq4WHywo?w=400&h=300&fit=crop" alt="Apple juice">
+        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Apple_juice.jpg?width=400" alt="Apple juice">
         <div class="card-body">
           <h3>Apple</h3>
           <div class="desc">Crisp and clean, kids' favourite</div>
@@ -399,6 +431,7 @@
              <div class="price-container">
               <span class="price-strike">₹50</span><span class="price">₹45</span>
             </div>
+            <button class="add-btn">+ Add</button>
           </div>
         </div>
       </div>
@@ -414,21 +447,22 @@
     <div class="grid">
 
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-uBpCKXiKoF0?w=400&h=300&fit=crop" alt="Mango juice">
+        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Mango_juice.JPG?width=400" alt="Mango juice">
         <div class="card-body">
+          <div><span class="badge">Seasonal</span></div>
           <h3>Mango</h3>
           <div class="desc">Alphonso, when it's in season</div>
           <div class="price-row">
              <div class="price-container">
               <span class="price-strike">₹50</span><span class="price">₹45</span>
             </div>
-            <span class="badge">Seasonal</span>
+            <button class="add-btn">+ Add</button>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-1550828520-4cb496926fc9?w=400&h=300&fit=crop" alt="Chikoo juice">
+        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Chikoo_Milkshake.jpg?width=400" alt="Chikoo juice">
         <div class="card-body">
           <h3>Chikoo (Sapota)</h3>
           <div class="desc">Malty-sweet, thick and filling</div>
@@ -436,12 +470,13 @@
              <div class="price-container">
               <span class="price-strike">₹40</span><span class="price">₹35</span>
             </div>
+            <button class="add-btn">+ Add</button>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-1568909344668-6f14a07b56a0?w=400&h=300&fit=crop" alt="Amla juice">
+        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Amla_juice.jpg?width=400" alt="Amla juice">
         <div class="card-body">
           <h3>Amla (Gooseberry)</h3>
           <div class="desc">Sharp, tangy, a morning regular's pick</div>
@@ -449,26 +484,28 @@
              <div class="price-container">
               <span class="price-strike">₹35</span><span class="price">₹30</span>
             </div>
+            <button class="add-btn">+ Add</button>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-1609503463720-d3a3c26788db?w=400&h=300&fit=crop" alt="Jamun juice">
+        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Jamun_Juice.jpg?width=400" alt="Jamun juice">
         <div class="card-body">
+          <div><span class="badge">Seasonal</span></div>
           <h3>Jamun</h3>
           <div class="desc">Earthy and deep purple, short season</div>
           <div class="price-row">
              <div class="price-container">
               <span class="price-strike">₹50</span><span class="price">₹45</span>
             </div>
-            <span class="badge">Seasonal</span>
+            <button class="add-btn">+ Add</button>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-1615478491845-a74426cb7bd1?w=400&h=300&fit=crop" alt="Carrot beet juice">
+        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Carrot_juice.jpg?width=400" alt="Carrot beet juice">
         <div class="card-body">
           <h3>Carrot–Beet</h3>
           <div class="desc">Earthy, naturally sweet, no sugar needed</div>
@@ -476,6 +513,7 @@
              <div class="price-container">
               <span class="price-strike">₹40</span><span class="price">₹35</span>
             </div>
+            <button class="add-btn">+ Add</button>
           </div>
         </div>
       </div>
@@ -491,7 +529,7 @@
     <div class="grid">
 
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-bT-eRvDBrZQ?w=400&h=300&fit=crop" alt="Banana milkshake">
+        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Banana_milkshake.jpg?width=400" alt="Banana milkshake">
         <div class="card-body">
           <h3>Banana Milkshake</h3>
           <div class="desc">Thick, creamy, no ice cream needed</div>
@@ -499,12 +537,13 @@
              <div class="price-container">
               <span class="price-strike">₹45</span><span class="price">₹40</span>
             </div>
+            <button class="add-btn">+ Add</button>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-qaE2Tqwgzic?w=400&h=300&fit=crop" alt="Mango milkshake">
+        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Mango_milkshake.jpg?width=400" alt="Mango milkshake">
         <div class="card-body">
           <h3>Mango Milkshake</h3>
           <div class="desc">Rich and cold, made with real mango</div>
@@ -512,12 +551,13 @@
              <div class="price-container">
               <span class="price-strike">₹55</span><span class="price">₹50</span>
             </div>
+            <button class="add-btn">+ Add</button>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=400&h=300&fit=crop" alt="Cucumber mint cooler">
+        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cucumber_juice.jpg?width=400" alt="Cucumber mint cooler">
         <div class="card-body">
           <h3>Cucumber Mint Cooler</h3>
           <div class="desc">Light, refreshing, nothing heavy</div>
@@ -525,12 +565,13 @@
              <div class="price-container">
               <span class="price-strike">₹30</span><span class="price">₹25</span>
             </div>
+            <button class="add-btn">+ Add</button>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-1621269389279-d5c22501a300?w=400&h=300&fit=crop" alt="Tender coconut water">
+        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tender_coconut_water.jpg?width=400" alt="Tender coconut water">
         <div class="card-body">
           <h3>Tender Coconut Water</h3>
           <div class="desc">Served straight and simple</div>
@@ -538,12 +579,13 @@
              <div class="price-container">
               <span class="price-strike">₹40</span><span class="price">₹35</span>
             </div>
+            <button class="add-btn">+ Add</button>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <img class="photo" src="https://images.unsplash.com/photo-1553530666-ac1dfa3afb15?w=400&h=300&fit=crop" alt="Mixed fruit punch">
+        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Mixed_fruit_juice.jpg?width=400" alt="Mixed fruit punch">
         <div class="card-body">
           <h3>Mixed Fruit Punch</h3>
           <div class="desc">A blend of whatever's freshest that day</div>
@@ -551,6 +593,7 @@
              <div class="price-container">
               <span class="price-strike">₹50</span><span class="price">₹45</span>
             </div>
+            <button class="add-btn">+ Add</button>
           </div>
         </div>
       </div>
