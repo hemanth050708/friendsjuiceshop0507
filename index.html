@@ -199,6 +199,16 @@
     align-items:center;
     justify-content:space-between;
   }
+  .price-container {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .price-strike {
+    text-decoration: line-through;
+    color: #8A7C6C;
+    font-size: 0.95rem;
+  }
   .price{
     font-family:'Baloo 2',sans-serif;
     font-weight:700;
@@ -212,10 +222,6 @@
     background:#E9F1DC;
     border-radius:999px;
     padding:3px 9px;
-  }
-  .badge.special {
-    background: #F7C56B;
-    color: #5B2333;
   }
 
   /* ---------- Footer ---------- */
@@ -278,8 +284,8 @@
 <div class="offers">
   <div class="offers-inner">
     <div class="offer-item"><strong>₹70</strong> for any 2 juices, all day</div>
-    <div class="offer-item"><strong>Student Combo</strong> — juice + milkshake for ₹75 with ID</div>
-    <div class="offer-item"><strong>Mystery Spin!</strong> Roll a 6 on the counter dice & get your drink FREE</div>
+    <div class="offer-item"><strong>Buy 3, Get 1 Free</strong> every Tuesday & Friday</div>
+    <div class="offer-item"><strong>Student Combo</strong> — juice + milkshake for ₹75 with college ID</div>
   </div>
 </div>
 
@@ -293,74 +299,107 @@
     <div class="grid">
 
       <div class="card">
-        <img class="photo" src="https://image.pollinations.ai/prompt/glass%20of%20red%20watermelon%20juice?width=400&height=300&nologo=true" alt="Watermelon juice">
+        <img class="photo" src="https://images.unsplash.com/photo-XoN3v3Ge7EE?w=400&h=300&fit=crop" alt="Watermelon juice">
         <div class="card-body">
           <h3>Watermelon</h3>
           <div class="desc">Chilled, seed-free, no added sugar</div>
-          <div class="price-row"><span class="price">₹30</span></div>
+          <div class="price-row">
+            <div class="price-container">
+              <span class="price-strike">₹30</span><span class="price">₹25</span>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="card">
-        <img class="photo" src="https://image.pollinations.ai/prompt/glass%20of%20sweet%20lime%20mosambi%20juice?width=400&height=300&nologo=true" alt="Mosambi juice">
+        <img class="photo" src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=400&h=300&fit=crop" alt="Mosambi juice">
         <div class="card-body">
           <h3>Mosambi (Sweet Lime)</h3>
           <div class="desc">A light, tangy everyday favourite</div>
-          <div class="price-row"><span class="price">₹30</span></div>
+          <div class="price-row">
+             <div class="price-container">
+              <span class="price-strike">₹30</span><span class="price">₹25</span>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="card">
-        <img class="photo" src="https://image.pollinations.ai/prompt/glass%20of%20fresh%20orange%20juice?width=400&height=300&nologo=true" alt="Orange juice">
+        <img class="photo" src="https://images.unsplash.com/photo-4BcZ6a5iIbU?w=400&h=300&fit=crop" alt="Orange juice">
         <div class="card-body">
           <h3>Orange</h3>
           <div class="desc">Pressed from ripe, seasonal oranges</div>
-          <div class="price-row"><span class="price">₹40</span></div>
+          <div class="price-row">
+             <div class="price-container">
+              <span class="price-strike">₹40</span><span class="price">₹35</span>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="card">
-        <img class="photo" src="https://image.pollinations.ai/prompt/glass%20of%20pineapple%20juice?width=400&height=300&nologo=true" alt="Pineapple juice">
+        <img class="photo" src="https://images.unsplash.com/photo-ywS7HzUNjuM?w=400&h=300&fit=crop" alt="Pineapple juice">
         <div class="card-body">
           <h3>Pineapple</h3>
           <div class="desc">Sweet and slightly tart</div>
-          <div class="price-row"><span class="price">₹40</span></div>
+          <div class="price-row">
+             <div class="price-container">
+              <span class="price-strike">₹40</span><span class="price">₹35</span>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="card">
-        <img class="photo" src="https://image.pollinations.ai/prompt/glass%20of%20pomegranate%20juice?width=400&height=300&nologo=true" alt="Pomegranate juice">
+        <img class="photo" src="https://images.unsplash.com/photo-rt6Bb3GTq0I?w=400&h=300&fit=crop" alt="Pomegranate juice">
         <div class="card-body">
           <h3>Pomegranate</h3>
           <div class="desc">Hand-deseeded, no water added</div>
-          <div class="price-row"><span class="price">₹60</span><span class="badge">Fresh daily</span></div>
+          <div class="price-row">
+             <div class="price-container">
+              <span class="price-strike">₹60</span><span class="price">₹50</span>
+            </div>
+            <span class="badge">Fresh daily</span>
+          </div>
         </div>
       </div>
 
       <div class="card">
-        <img class="photo" src="https://image.pollinations.ai/prompt/glass%20of%20purple%20grape%20juice?width=400&height=300&nologo=true" alt="Grape juice">
+        <img class="photo" src="https://images.unsplash.com/photo-MjHFLELBaA0?w=400&h=300&fit=crop" alt="Grape juice">
         <div class="card-body">
           <h3>Grape</h3>
           <div class="desc">Deep purple, naturally sweet</div>
-          <div class="price-row"><span class="price">₹40</span></div>
+          <div class="price-row">
+             <div class="price-container">
+              <span class="price-strike">₹40</span><span class="price">₹35</span>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="card">
-        <img class="photo" src="https://image.pollinations.ai/prompt/glass%20of%20papaya%20juice?width=400&height=300&nologo=true" alt="Papaya juice">
+        <img class="photo" src="https://images.unsplash.com/photo-1543362906-acfc16c67564?w=400&h=300&fit=crop" alt="Papaya juice">
         <div class="card-body">
           <h3>Papaya</h3>
           <div class="desc">Smooth, mildly sweet, easy on the stomach</div>
-          <div class="price-row"><span class="price">₹35</span></div>
+          <div class="price-row">
+             <div class="price-container">
+              <span class="price-strike">₹35</span><span class="price">₹30</span>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="card">
-        <img class="photo" src="https://image.pollinations.ai/prompt/glass%20of%20apple%20juice?width=400&height=300&nologo=true" alt="Apple juice">
+        <img class="photo" src="https://images.unsplash.com/photo-3ULSq4WHywo?w=400&h=300&fit=crop" alt="Apple juice">
         <div class="card-body">
           <h3>Apple</h3>
           <div class="desc">Crisp and clean, kids' favourite</div>
-          <div class="price-row"><span class="price">₹50</span></div>
+          <div class="price-row">
+             <div class="price-container">
+              <span class="price-strike">₹50</span><span class="price">₹45</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -374,58 +413,70 @@
     </div>
     <div class="grid">
 
-      <!-- New Random Offer Card -->
-      <div class="card" style="border: 2px solid var(--orange); background: var(--cream-alt);">
-        <img class="photo" src="https://image.pollinations.ai/prompt/mystery%20colorful%20fruit%20juice%20drink?width=400&height=300&nologo=true" alt="Mystery Juice">
-        <div class="card-body">
-          <h3>Daily Random Surprise</h3>
-          <div class="desc">Feeling lucky? Let us mix up a unique secret recipe just for you!</div>
-          <div class="price-row"><span class="price">₹35</span><span class="badge special">Random Deal</span></div>
-        </div>
-      </div>
-
       <div class="card">
-        <img class="photo" src="https://image.pollinations.ai/prompt/glass%20of%20mango%20juice?width=400&height=300&nologo=true" alt="Mango juice">
+        <img class="photo" src="https://images.unsplash.com/photo-uBpCKXiKoF0?w=400&h=300&fit=crop" alt="Mango juice">
         <div class="card-body">
           <h3>Mango</h3>
           <div class="desc">Alphonso, when it's in season</div>
-          <div class="price-row"><span class="price">₹50</span><span class="badge">Seasonal</span></div>
+          <div class="price-row">
+             <div class="price-container">
+              <span class="price-strike">₹50</span><span class="price">₹45</span>
+            </div>
+            <span class="badge">Seasonal</span>
+          </div>
         </div>
       </div>
 
       <div class="card">
-        <img class="photo" src="https://image.pollinations.ai/prompt/glass%20of%20sapota%20chikoo%20milkshake?width=400&height=300&nologo=true" alt="Chikoo juice">
+        <img class="photo" src="https://images.unsplash.com/photo-1550828520-4cb496926fc9?w=400&h=300&fit=crop" alt="Chikoo juice">
         <div class="card-body">
           <h3>Chikoo (Sapota)</h3>
           <div class="desc">Malty-sweet, thick and filling</div>
-          <div class="price-row"><span class="price">₹40</span></div>
+          <div class="price-row">
+             <div class="price-container">
+              <span class="price-strike">₹40</span><span class="price">₹35</span>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="card">
-        <img class="photo" src="https://image.pollinations.ai/prompt/glass%20of%20green%20amla%20gooseberry%20juice?width=400&height=300&nologo=true" alt="Amla juice">
+        <img class="photo" src="https://images.unsplash.com/photo-1568909344668-6f14a07b56a0?w=400&h=300&fit=crop" alt="Amla juice">
         <div class="card-body">
           <h3>Amla (Gooseberry)</h3>
           <div class="desc">Sharp, tangy, a morning regular's pick</div>
-          <div class="price-row"><span class="price">₹35</span></div>
+          <div class="price-row">
+             <div class="price-container">
+              <span class="price-strike">₹35</span><span class="price">₹30</span>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="card">
-        <img class="photo" src="https://image.pollinations.ai/prompt/glass%20of%20dark%20purple%20jamun%20juice?width=400&height=300&nologo=true" alt="Jamun juice">
+        <img class="photo" src="https://images.unsplash.com/photo-1609503463720-d3a3c26788db?w=400&h=300&fit=crop" alt="Jamun juice">
         <div class="card-body">
           <h3>Jamun</h3>
           <div class="desc">Earthy and deep purple, short season</div>
-          <div class="price-row"><span class="price">₹50</span><span class="badge">Seasonal</span></div>
+          <div class="price-row">
+             <div class="price-container">
+              <span class="price-strike">₹50</span><span class="price">₹45</span>
+            </div>
+            <span class="badge">Seasonal</span>
+          </div>
         </div>
       </div>
 
       <div class="card">
-        <img class="photo" src="https://image.pollinations.ai/prompt/glass%20of%20red%20carrot%20beetroot%20juice?width=400&height=300&nologo=true" alt="Carrot beet juice">
+        <img class="photo" src="https://images.unsplash.com/photo-1615478491845-a74426cb7bd1?w=400&h=300&fit=crop" alt="Carrot beet juice">
         <div class="card-body">
           <h3>Carrot–Beet</h3>
           <div class="desc">Earthy, naturally sweet, no sugar needed</div>
-          <div class="price-row"><span class="price">₹40</span></div>
+          <div class="price-row">
+             <div class="price-container">
+              <span class="price-strike">₹40</span><span class="price">₹35</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -440,47 +491,67 @@
     <div class="grid">
 
       <div class="card">
-        <img class="photo" src="https://image.pollinations.ai/prompt/glass%20of%20banana%20milkshake?width=400&height=300&nologo=true" alt="Banana milkshake">
+        <img class="photo" src="https://images.unsplash.com/photo-bT-eRvDBrZQ?w=400&h=300&fit=crop" alt="Banana milkshake">
         <div class="card-body">
           <h3>Banana Milkshake</h3>
           <div class="desc">Thick, creamy, no ice cream needed</div>
-          <div class="price-row"><span class="price">₹45</span></div>
+          <div class="price-row">
+             <div class="price-container">
+              <span class="price-strike">₹45</span><span class="price">₹40</span>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="card">
-        <img class="photo" src="https://image.pollinations.ai/prompt/glass%20of%20thick%20mango%20milkshake?width=400&height=300&nologo=true" alt="Mango milkshake">
+        <img class="photo" src="https://images.unsplash.com/photo-qaE2Tqwgzic?w=400&h=300&fit=crop" alt="Mango milkshake">
         <div class="card-body">
           <h3>Mango Milkshake</h3>
           <div class="desc">Rich and cold, made with real mango</div>
-          <div class="price-row"><span class="price">₹55</span></div>
+          <div class="price-row">
+             <div class="price-container">
+              <span class="price-strike">₹55</span><span class="price">₹50</span>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="card">
-        <img class="photo" src="https://image.pollinations.ai/prompt/glass%20of%20cucumber%20mint%20cooler%20drink?width=400&height=300&nologo=true" alt="Cucumber mint cooler">
+        <img class="photo" src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=400&h=300&fit=crop" alt="Cucumber mint cooler">
         <div class="card-body">
           <h3>Cucumber Mint Cooler</h3>
           <div class="desc">Light, refreshing, nothing heavy</div>
-          <div class="price-row"><span class="price">₹30</span></div>
+          <div class="price-row">
+             <div class="price-container">
+              <span class="price-strike">₹30</span><span class="price">₹25</span>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="card">
-        <img class="photo" src="https://image.pollinations.ai/prompt/fresh%20tender%20coconut%20water%20in%20shell?width=400&height=300&nologo=true" alt="Tender coconut water">
+        <img class="photo" src="https://images.unsplash.com/photo-1621269389279-d5c22501a300?w=400&h=300&fit=crop" alt="Tender coconut water">
         <div class="card-body">
           <h3>Tender Coconut Water</h3>
           <div class="desc">Served straight and simple</div>
-          <div class="price-row"><span class="price">₹40</span></div>
+          <div class="price-row">
+             <div class="price-container">
+              <span class="price-strike">₹40</span><span class="price">₹35</span>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="card">
-        <img class="photo" src="https://image.pollinations.ai/prompt/glass%20of%20mixed%20fruit%20punch%20juice?width=400&height=300&nologo=true" alt="Mixed fruit punch">
+        <img class="photo" src="https://images.unsplash.com/photo-1553530666-ac1dfa3afb15?w=400&h=300&fit=crop" alt="Mixed fruit punch">
         <div class="card-body">
           <h3>Mixed Fruit Punch</h3>
           <div class="desc">A blend of whatever's freshest that day</div>
-          <div class="price-row"><span class="price">₹50</span></div>
+          <div class="price-row">
+             <div class="price-container">
+              <span class="price-strike">₹50</span><span class="price">₹45</span>
+            </div>
+          </div>
         </div>
       </div>
 
