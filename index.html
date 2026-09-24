@@ -152,7 +152,7 @@
     display:grid;
     grid-template-columns:repeat(auto-fill, minmax(210px,1fr));
     gap:24px;
-    align-items: stretch; /* Forces equal height cards */
+    align-items: stretch; /* Forces equal height cards across the row */
   }
   
   .card{
@@ -220,7 +220,7 @@
     margin: 0 0 4px 0;
     color:var(--ink);
     
-    /* Strict 2-line constraint */
+    /* Strict 2-line height constraint to keep rows aligned */
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -234,7 +234,7 @@
     color:var(--ink-soft);
     margin: 0 0 16px 0;
     
-    /* Strict 2-line constraint */
+    /* Strict 2-line height constraint to keep rows aligned */
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -246,7 +246,7 @@
     display:flex;
     align-items:center;
     justify-content:space-between;
-    margin-top: auto; /* Pushes straight to the bottom */
+    margin-top: auto; /* Pushes the button straight to the bottom edge */
   }
   
   .price-container {
@@ -365,7 +365,7 @@
       <!-- WATERMELON -->
       <div class="card">
         <div class="photo-wrapper">
-          <img class="photo" src="https://images.unsplash.com/photo-1589733955941-5eeaf752f6dd?w=500&q=80" alt="Watermelon juice">
+          <img class="photo" src="https://images.unsplash.com/photo-1589733955941-5eeaf752f6dd?w=500&h=375&fit=crop&q=80" alt="Watermelon juice">
         </div>
         <div class="card-body">
           <h3>Watermelon</h3>
@@ -382,7 +382,7 @@
       <!-- MOSAMBI -->
       <div class="card">
         <div class="photo-wrapper">
-          <img class="photo" src="https://images.unsplash.com/photo-1556881286-fc6915169721?w=500&q=80" alt="Mosambi juice">
+          <img class="photo" src="https://images.unsplash.com/photo-qlWfxFXl15I?w=500&h=375&fit=crop&q=80" alt="Mosambi juice">
         </div>
         <div class="card-body">
           <h3>Mosambi (Sweet Lime)</h3>
@@ -399,7 +399,7 @@
       <!-- ORANGE -->
       <div class="card">
         <div class="photo-wrapper">
-          <img class="photo" src="https://images.unsplash.com/photo-1613478223719-2ab802602423?w=500&q=80" alt="Orange juice">
+          <img class="photo" src="https://images.unsplash.com/photo-1613478223719-2ab802602423?w=500&h=375&fit=crop&q=80" alt="Orange juice">
         </div>
         <div class="card-body">
           <h3>Orange</h3>
@@ -416,7 +416,7 @@
       <!-- PINEAPPLE -->
       <div class="card">
         <div class="photo-wrapper">
-          <img class="photo" src="https://images.unsplash.com/photo-1550828520-4cb496926fc9?w=500&q=80" alt="Pineapple juice">
+          <img class="photo" src="https://images.unsplash.com/photo-1550828520-4cb496926fc9?w=500&h=375&fit=crop&q=80" alt="Pineapple juice">
         </div>
         <div class="card-body">
           <h3>Pineapple</h3>
@@ -434,7 +434,7 @@
       <div class="card">
         <div class="photo-wrapper">
           <span class="badge">Fresh daily</span>
-          <img class="photo" src="https://images.unsplash.com/photo-1546890975-7596e98cdbf1?w=500&q=80" alt="Pomegranate juice">
+          <img class="photo" src="https://images.unsplash.com/photo-an5Jf8HROtY?w=500&h=375&fit=crop&q=80" alt="Pomegranate juice">
         </div>
         <div class="card-body">
           <h3>Pomegranate</h3>
@@ -451,7 +451,7 @@
       <!-- GRAPE -->
       <div class="card">
         <div class="photo-wrapper">
-          <img class="photo" src="https://images.unsplash.com/photo-1570584501250-9c2999e53000?w=500&q=80" alt="Grape juice">
+          <img class="photo" src="https://images.unsplash.com/photo-VOdONjAP_Lk?w=500&h=375&fit=crop&q=80" alt="Grape juice">
         </div>
         <div class="card-body">
           <h3>Grape</h3>
@@ -468,7 +468,7 @@
       <!-- PAPAYA -->
       <div class="card">
         <div class="photo-wrapper">
-          <img class="photo" src="https://images.unsplash.com/photo-1625904835711-096b79796858?w=500&q=80" alt="Papaya juice">
+          <img class="photo" src="https://images.unsplash.com/photo-Z_tLJseBEOg?w=500&h=375&fit=crop&q=80" alt="Papaya juice">
         </div>
         <div class="card-body">
           <h3>Papaya</h3>
@@ -485,7 +485,7 @@
       <!-- APPLE -->
       <div class="card">
         <div class="photo-wrapper">
-          <img class="photo" src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=500&q=80" alt="Apple juice">
+          <img class="photo" src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=500&h=375&fit=crop&q=80" alt="Apple juice">
         </div>
         <div class="card-body">
           <h3>Apple</h3>
@@ -513,7 +513,7 @@
       <div class="card">
         <div class="photo-wrapper">
           <span class="badge seasonal">Seasonal</span>
-          <img class="photo" src="https://images.unsplash.com/photo-1596796915174-8dbbb1ee5843?w=500&q=80" alt="Mango juice">
+          <img class="photo" src="https://images.unsplash.com/photo-uBpCKXiKoF0?w=500&h=375&fit=crop&q=80" alt="Mango juice">
         </div>
         <div class="card-body">
           <h3>Mango</h3>
@@ -530,7 +530,7 @@
       <!-- CHIKOO -->
       <div class="card">
         <div class="photo-wrapper">
-          <img class="photo" src="https://images.unsplash.com/photo-1572490122747-3968b75bf699?w=500&q=80" alt="Chikoo juice">
+          <img class="photo" src="https://images.unsplash.com/photo-O39Vx5yPaD4?w=500&h=375&fit=crop&q=80" alt="Chikoo juice">
         </div>
         <div class="card-body">
           <h3>Chikoo (Sapota)</h3>
@@ -547,7 +547,7 @@
       <!-- AMLA -->
       <div class="card">
         <div class="photo-wrapper">
-          <img class="photo" src="https://images.unsplash.com/photo-1628557044797-f21a177c37ec?w=500&q=80" alt="Amla juice">
+          <img class="photo" src="https://images.unsplash.com/photo-1556881286-fc6915169721?w=500&h=375&fit=crop&q=80" alt="Amla juice">
         </div>
         <div class="card-body">
           <h3>Amla (Gooseberry)</h3>
@@ -565,7 +565,7 @@
       <div class="card">
         <div class="photo-wrapper">
           <span class="badge seasonal">Seasonal</span>
-          <img class="photo" src="https://images.unsplash.com/photo-1606822293410-b9df74fa88d9?w=500&q=80" alt="Jamun juice">
+          <img class="photo" src="https://images.unsplash.com/photo-r2Q_e8l68gM?w=500&h=375&fit=crop&q=80" alt="Jamun juice">
         </div>
         <div class="card-body">
           <h3>Jamun</h3>
@@ -582,7 +582,7 @@
       <!-- CARROT BEET -->
       <div class="card">
         <div class="photo-wrapper">
-          <img class="photo" src="https://images.unsplash.com/photo-1629819854738-9993ea06b128?w=500&q=80" alt="Carrot beet juice">
+          <img class="photo" src="https://images.unsplash.com/photo-c5PN_wvHdQI?w=500&h=375&fit=crop&q=80" alt="Carrot beet juice">
         </div>
         <div class="card-body">
           <h3>Carrot–Beet</h3>
@@ -609,7 +609,7 @@
       <!-- BANANA MILKSHAKE -->
       <div class="card">
         <div class="photo-wrapper">
-          <img class="photo" src="https://images.unsplash.com/photo-1626074353365-5109673995f7?w=500&q=80" alt="Banana milkshake">
+          <img class="photo" src="https://images.unsplash.com/photo-dj0Np1jooWk?w=500&h=375&fit=crop&q=80" alt="Banana milkshake">
         </div>
         <div class="card-body">
           <h3>Banana Milkshake</h3>
@@ -626,7 +626,7 @@
       <!-- MANGO MILKSHAKE -->
       <div class="card">
         <div class="photo-wrapper">
-          <img class="photo" src="https://images.unsplash.com/photo-1546171753-97d7676e4602?w=500&q=80" alt="Mango milkshake">
+          <img class="photo" src="https://images.unsplash.com/photo-1546171753-97d7676e4602?w=500&h=375&fit=crop&q=80" alt="Mango milkshake">
         </div>
         <div class="card-body">
           <h3>Mango Milkshake</h3>
@@ -643,7 +643,7 @@
       <!-- CUCUMBER MINT COOLER -->
       <div class="card">
         <div class="photo-wrapper">
-          <img class="photo" src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=500&q=80" alt="Cucumber mint cooler">
+          <img class="photo" src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=500&h=375&fit=crop&q=80" alt="Cucumber mint cooler">
         </div>
         <div class="card-body">
           <h3>Cucumber Mint Cooler</h3>
@@ -660,7 +660,7 @@
       <!-- TENDER COCONUT -->
       <div class="card">
         <div class="photo-wrapper">
-          <img class="photo" src="https://images.unsplash.com/photo-1550410710-d86b723522f7?w=500&q=80" alt="Tender coconut water">
+          <img class="photo" src="https://images.unsplash.com/photo-b9pis-g1F6g?w=500&h=375&fit=crop&q=80" alt="Tender coconut water">
         </div>
         <div class="card-body">
           <h3>Tender Coconut Water</h3>
@@ -677,7 +677,7 @@
       <!-- MIXED FRUIT PUNCH -->
       <div class="card">
         <div class="photo-wrapper">
-          <img class="photo" src="https://images.unsplash.com/photo-1585553616435-2dc0a54e271d?w=500&q=80" alt="Mixed fruit punch">
+          <img class="photo" src="https://images.unsplash.com/photo-t1aF27GcvQQ?w=500&h=375&fit=crop&q=80" alt="Mixed fruit punch">
         </div>
         <div class="card-body">
           <h3>Mixed Fruit Punch</h3>
